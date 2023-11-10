@@ -1,0 +1,18 @@
+
+<%- include('header') -%>
+
+<div class="container mt-5">
+    <div class="homePrologue mb-4">
+        <h2>Home</h2> 
+        <%= homePrologue %>
+    </div>
+    <% postList.forEach((element)=>{ %>
+        <div class="post p-3 mb-4">
+            <h3> <%= element.title %> </h3>
+            <p><%= (element.content).substring(0,25) %>... <a href="/post/<%=element._id%>" >Read More</a> </p>
+        </div>
+    <% }) %>
+        
+</div>
+
+<!-- <%- include('footer') -%> -->
